@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Flame">
+      <UniqueIdentifier>{6A972E0D-D6AB-56BE-9F2D-FA1D0B0153EF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Flame\Core">
+      <UniqueIdentifier>{02EEA0AF-EEA5-E2FC-57AD-BB5843847DED}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Flame.h" />
+    <ClInclude Include="src\Flame\Core\App.h">
+      <Filter>Flame\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pchFlame.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Flame\Core\App.cpp">
+      <Filter>Flame\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Flame\Core\EntryPoint.cpp">
+      <Filter>Flame\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pchFlame.cpp" />
+  </ItemGroup>
+</Project>
