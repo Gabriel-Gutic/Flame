@@ -1,0 +1,6 @@
+[submodule "Flame/Flame/dependencies/spdlog"]
+	path = Flame/Flame/dependencies/spdlog
+	url = https://github.com/gabime/spdlog.git
+[submodule "Flame/Flame/dependencies/GLFW/GLFW"]
+	path = Flame/Flame/dependencies/GLFW/GLFW
+	url = https://github.com/glfw/glfw.git
