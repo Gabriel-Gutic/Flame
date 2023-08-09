@@ -16,5 +16,7 @@ namespace Flame
 		static App* CreateApplication();
 	private:
 		static App* s_Instance;
+
+		bool m_IsRunning;
 	};
 }

@@ -58,7 +58,7 @@
       <PrecompiledHeaderFile>pchFlame.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>FLAME_PLATFORM_WINDOWS;DEBUG;FLAME_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;src\Flame;dependencies\SDL2\SDL2-2.28.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;src\Flame;dependencies\spdlog\include;dependencies\GLFW\GLFW\include;dependencies\Glad\Glad\include;dependencies\ImGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -68,10 +68,6 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
-    <Lib>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>dependencies\SDL2\SDL2-2.28.2\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -79,7 +75,7 @@
       <PrecompiledHeaderFile>pchFlame.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>FLAME_PLATFORM_WINDOWS;RELEASE;FLAME_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;src\Flame;dependencies\SDL2\SDL2-2.28.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;src\Flame;dependencies\spdlog\include;dependencies\GLFW\GLFW\include;dependencies\Glad\Glad\include;dependencies\ImGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -89,19 +85,18 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
-    <Lib>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>dependencies\SDL2\SDL2-2.28.2\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-    </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\Flame.h" />
     <ClInclude Include="src\Flame\Core\App.h" />
+    <ClInclude Include="src\Flame\Core\Logger\Logger.h" />
+    <ClInclude Include="src\Flame\Core\Logger\Print.h" />
     <ClInclude Include="src\pchFlame.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Flame\Core\App.cpp" />
     <ClCompile Include="src\Flame\Core\EntryPoint.cpp" />
+    <ClCompile Include="src\Flame\Core\Logger\Logger.cpp" />
     <ClCompile Include="src\pchFlame.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>

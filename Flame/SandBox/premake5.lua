@@ -21,17 +21,13 @@ project "SandBox"
 		"src",
 		sln .. "Flame/src",
 		sln .. "Flame/src/Flame",
+		sln .. "Flame/dependencies/spdlog/include",
 	}
 
 	links
 	{
 		"Flame",
 	}
-
-	postbuildcommands
-    {
-        {"{COPY} \"" .. sln .. "Flame/" .. dependencies["SDL2"] .. "/lib/x64/SDL2.dll\" \"" .. bin_dir .. "\""}
-    }
 
 	filter "system:windows"
 		systemversion "latest"

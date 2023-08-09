@@ -1,6 +1,14 @@
 dependencies = {}
-dependencies["SDL2"] = "dependencies/SDL2/SDL2-2.28.2"
+dependencies["GLFW"] = "dependencies/GLFW/GLFW"
+dependencies["Glad"] = "dependencies/Glad/Glad"
+dependencies["ImGui"] = "dependencies/ImGui"
+dependencies["spdlog"] = "dependencies/spdlog"
 
+group "Dependencies"
+	include "dependencies/GLFW"
+	include "dependencies/Glad"
+	include "dependencies/ImGui"
+group ""
 
 project "Flame"
 	kind "StaticLib"
@@ -24,18 +32,10 @@ project "Flame"
 	{
 		"src",
 		"src/Flame",
-		dependencies["SDL2"] .. "/include",
-	}
-
-	libdirs
-	{
-		dependencies["SDL2"] .. "/lib/x64",
-	}
-
-	links 
-	{
-		"SDL2.lib",
-		"SDL2main.lib",
+		dependencies["spdlog"] .. "/include",
+		dependencies["GLFW"] .. "/include",
+		dependencies["Glad"] .. "/include",
+		dependencies["ImGui"],
 	}
 
 	filter "system:windows"

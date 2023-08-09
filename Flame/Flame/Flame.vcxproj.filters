@@ -7,11 +7,20 @@
     <Filter Include="Flame\Core">
       <UniqueIdentifier>{02EEA0AF-EEA5-E2FC-57AD-BB5843847DED}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Flame\Core\Logger">
+      <UniqueIdentifier>{91ED58C3-FD03-5759-467B-E27AB2D027E1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Flame.h" />
     <ClInclude Include="src\Flame\Core\App.h">
       <Filter>Flame\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Flame\Core\Logger\Logger.h">
+      <Filter>Flame\Core\Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Flame\Core\Logger\Print.h">
+      <Filter>Flame\Core\Logger</Filter>
     </ClInclude>
     <ClInclude Include="src\pchFlame.h" />
   </ItemGroup>
@@ -21,6 +30,9 @@
     </ClCompile>
     <ClCompile Include="src\Flame\Core\EntryPoint.cpp">
       <Filter>Flame\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Flame\Core\Logger\Logger.cpp">
+      <Filter>Flame\Core\Logger</Filter>
     </ClCompile>
     <ClCompile Include="src\pchFlame.cpp" />
   </ItemGroup>
